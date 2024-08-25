@@ -1,6 +1,3 @@
-// read custom message from query strings
-// Tutorial -> https://youtu.be/6ojp1iWUKw8
-
 const urlSearchParams = new URLSearchParams(window.location.search)
 
 const messageCustom = urlSearchParams.get('message')
@@ -11,7 +8,7 @@ if (messageCustom) {
   mainMessageElement.textContent = decodeURI(messageCustom)
 }
 
-// the tutorial starts here
+
 
 const btnOpenElement = document.querySelector('#open')
 const btnCloseElement = document.querySelector('#close')
@@ -27,14 +24,14 @@ btnOpenElement.addEventListener('click', ()=> {
   coverElement.classList.add('open-cover')
 
   setTimeout(()=>{
-    //
+
     coverElement.style.zIndex = -1
     
     const paperElement = document.querySelector('.paper')
     paperElement.classList.remove('close-paper')
     paperElement.classList.add('open-paper')
 
-    // animacion del corazón
+
     const heartElement = document.querySelector('.heart')
     heartElement.style.display = 'block'
   
